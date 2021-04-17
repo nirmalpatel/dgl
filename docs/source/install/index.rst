@@ -116,6 +116,12 @@ install the Python binding for DGL.
    cd ../python
    python setup.py install
 
+If you are using an Apple Sillicon machine with M1, please turn the ``USE_AVX`` flag off in the cmake command like the following:
+
+.. code:: bash
+
+   cmake -DUSE_OPENMP=off -DUSE_AVX=off -DCMAKE_C_FLAGS='-DXBYAK_DONT_USE_MAP_JIT' -DCMAKE_CXX_FLAGS='-DXBYAK_DONT_USE_MAP_JIT' ..
+
 Windows
 ```````
 
